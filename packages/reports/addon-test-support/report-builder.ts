@@ -3,6 +3,7 @@ import { assert } from '@ember/debug';
 import { set } from '@ember/object';
 //@ts-ignore
 import findByContains from 'navi-core/test-support/contains-helpers';
+//@ts-ignore
 import { getVerticalCollection, renderAllItems } from './vertical-collection';
 import type { ColumnType } from 'navi-data/models/metadata/column';
 
