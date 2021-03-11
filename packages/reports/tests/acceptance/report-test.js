@@ -1555,7 +1555,7 @@ module('Acceptance | Navi Report', function (hooks) {
     );
 
     // Click Date Time again
-    await clickItem('timeGrain', 'Date Time');
+    await clickItem('timeDimension', 'Date Time');
 
     assert.deepEqual(
       await getAllSelected('dimension'),

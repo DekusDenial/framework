@@ -72,7 +72,7 @@ module('Acceptance | Navi Report | Column Config', function (hooks) {
     assert.dom('.navi-column-config__panel').doesNotExist('Column config drawer is closed');
 
     //add Date Time
-    await clickItem('timeGrain', 'Date Time');
+    await clickItem('timeDimension', 'Date Time');
     await animationsSettled();
     assert.dom('.navi-column-config__panel').exists('Column config drawer is open after adding date time');
 
@@ -82,7 +82,7 @@ module('Acceptance | Navi Report | Column Config', function (hooks) {
     assert.dom('.navi-column-config__panel').doesNotExist('Column config drawer is closed');
 
     //click Date Time again
-    await clickItem('timeGrain', 'Date Time');
+    await clickItem('timeDimension', 'Date Time');
     await animationsSettled();
     assert.dom('.navi-column-config__panel').exists('Column config drawer is open when clicking date time');
 
@@ -141,7 +141,7 @@ module('Acceptance | Navi Report | Column Config', function (hooks) {
     assert.deepEqual(getColumns(), [], 'Initially no columns are present');
 
     //add Date Time
-    await clickItem('timeGrain', 'Date Time');
+    await clickItem('timeDimension', 'Date Time');
     await animationsSettled();
     assert.dom('.navi-column-config-item').hasClass('navi-column-config-item--open', 'Date time config is open');
     assert
