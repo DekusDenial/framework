@@ -1,5 +1,5 @@
 /**
- * Copyright 2020, Yahoo Holdings Inc.
+ * Copyright 2021, Yahoo Holdings Inc.
  * Licensed under the terms of the MIT license. See accompanying LICENSE.md file for terms.
  */
 import attr from 'ember-data/attr';
@@ -27,5 +27,11 @@ export default class ColumnFragment<T extends ColumnType = ColumnType> extends B
   get displayName(): string {
     const { alias, parameters, columnMetadata } = this;
     return this.naviFormatter.formatColumnName(columnMetadata, parameters, alias);
+  }
+}
+
+declare module '../../registry' {
+  export interface FragmentRegistry {
+    'bard-request-v2/fragments/column': ColumnFragment;
   }
 }
