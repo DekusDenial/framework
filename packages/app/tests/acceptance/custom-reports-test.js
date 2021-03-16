@@ -24,7 +24,6 @@ module('Acceptance | custom reports', function (hooks) {
       currentURL().match(/^\/reports\/\d+\/view$/),
       `On clicking the "${reportTitle}" link, user is brought to the appropriate report view`
     );
-
     assert.dom('.navi-report__title').hasText(reportTitle, `Report title contains text "${reportTitle}" as expected`);
   });
 
