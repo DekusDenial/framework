@@ -18,7 +18,7 @@ shared:
     jobs:
       main-npm-test-job: &main-npm-test-job
         annotations:
-          screwdriver.cd/ram: LOW
+          screwdriver.cd/ram: HIGH
           screwdriver.cd/cpu: LOW
         steps:
           - *install-node
@@ -47,6 +47,8 @@ jobs:
       - lint-addons: npx lerna run lint --stream;
   main-admin:
     <<: *main-npm-test-job
+    annotations:
+      screwdriver.cd/ram: LOW
     environment:
       PACKAGE: navi-admin
   main-app:
@@ -63,6 +65,8 @@ jobs:
       PACKAGE: navi-dashboards
   main-data:
     <<: *main-npm-test-job
+    annotations:
+      screwdriver.cd/ram: LOW
     environment:
       PACKAGE: navi-data
   main-directory:
@@ -71,6 +75,8 @@ jobs:
       PACKAGE: navi-directory
   main-notifications:
     <<: *main-npm-test-job
+    annotations:
+      screwdriver.cd/ram: LOW
     environment:
       PACKAGE: navi-notifications
   main-reports:
@@ -79,6 +85,8 @@ jobs:
       PACKAGE: navi-reports
   main-search:
     <<: *main-npm-test-job
+    annotations:
+      screwdriver.cd/ram: LOW
     environment:
       PACKAGE: navi-search
   main-webservice:
