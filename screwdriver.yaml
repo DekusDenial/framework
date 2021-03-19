@@ -4,8 +4,8 @@ cache:
 shared:
   image: maven:3.6.3-jdk-8
   annotations:
-    screwdriver.cd/ram: TURBO
-    screwdriver.cd/cpu: TURBO
+    screwdriver.cd/ram: LOW
+    screwdriver.cd/cpu: LOW
     steps:
       - .: &install-node
           install-node: |
