@@ -21,7 +21,7 @@ shared:
           - *install-node
           - *npm-ci
           - *install-chrome
-          - test-package: npx lerna run test --scope $PACKAGE --stream;
+          - test-package: npx lerna run test --scope $PACKAGE --stream; 
         requires:
           - ~pr
           - ~commit
