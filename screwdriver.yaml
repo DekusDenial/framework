@@ -17,11 +17,11 @@ shared:
           install-chrome: ./build-scripts/setup-chrome.sh
     jobs:
       main-npm-test-job: &main-npm-test-job
-        image: node:12
         annotations:
           screwdriver.cd/ram: LOW
           screwdriver.cd/cpu: LOW
         steps:
+          - *install-node
           - *npm-ci
           - *install-chrome
           - test-package: npx lerna run test --scope $PACKAGE --stream;
