@@ -10,7 +10,7 @@ shared:
       - .: &install-node
           install-node: |
             sd-cmd exec screwdriver/install-nodejs@latest $NODE_VERSION
-            export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" && nvm use node
+            export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh"  && nvm use node
       - .: &npm-ci
           npm-ci: npm ci --unsafe-perm
       - .: &install-chrome
