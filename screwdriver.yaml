@@ -31,6 +31,7 @@ shared:
         environment:
           JOBS: 1
   environment:
+    HUSKY_SKIP_INSTALL: true
     NODE_VERSION: 12.16.0
     JOBS: 4
 
