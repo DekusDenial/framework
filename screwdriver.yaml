@@ -1,5 +1,18 @@
 cache:
-  pipeline: [~/.npm, ~/.gradle]
+  pipeline:
+    - ~/.npm,
+    - ~/.gradle,
+    - $SD_SOURCE_DIR/node_modules
+    - $SD_SOURCE_DIR/packages/admin/node_modules
+    - $SD_SOURCE_DIR/packages/app/node_modules
+    - $SD_SOURCE_DIR/packages/core/node_modules
+    - $SD_SOURCE_DIR/packages/dashboards/node_modules
+    - $SD_SOURCE_DIR/packages/data/node_modules
+    - $SD_SOURCE_DIR/packages/directory/node_modules
+    - $SD_SOURCE_DIR/packages/notifications/node_modules
+    - $SD_SOURCE_DIR/packages/reports/node_modules
+    - $SD_SOURCE_DIR/packages/search/node_modules
+    - $SD_SOURCE_DIR/packages/webservice/node_modules
 
 shared:
   image: maven:3.6.3-jdk-8
@@ -19,7 +32,7 @@ shared:
       main-npm-test-job: &main-npm-test-job
         annotations:
           screwdriver.cd/ram: HIGH
-          screwdriver.cd/cpu: LOW
+          screwdriver.cd/cpu: HIGH
         steps:
           - *install-node
           - *npm-ci
@@ -65,8 +78,6 @@ jobs:
       PACKAGE: navi-dashboards
   main-data:
     <<: *main-npm-test-job
-    annotations:
-      screwdriver.cd/ram: LOW
     environment:
       PACKAGE: navi-data
   main-directory:
@@ -75,8 +86,6 @@ jobs:
       PACKAGE: navi-directory
   main-notifications:
     <<: *main-npm-test-job
-    annotations:
-      screwdriver.cd/ram: LOW
     environment:
       PACKAGE: navi-notifications
   main-reports:
@@ -85,8 +94,6 @@ jobs:
       PACKAGE: navi-reports
   main-search:
     <<: *main-npm-test-job
-    annotations:
-      screwdriver.cd/ram: LOW
     environment:
       PACKAGE: navi-search
   main-webservice:
@@ -97,6 +104,8 @@ jobs:
     requires:
       - ~pr
       - ~commit
+    environment:
+      JOBS: 1
   main:
     image: screwdrivercd/noop-container
     annotations:
