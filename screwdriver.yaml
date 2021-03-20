@@ -147,42 +147,6 @@ jobs:
     <<: *main-npm-test-job
     environment:
       PACKAGE: navi-search
-  main-admin4:
-    <<: *main-npm-test-job
-    environment:
-      PACKAGE: navi-admin
-  main-app4:
-    <<: *main-npm-test-job
-    environment:
-      PACKAGE: navi-app
-  main-core4:
-    <<: *main-npm-test-job
-    environment:
-      PACKAGE: navi-core
-  main-dashboards4:
-    <<: *main-npm-test-job
-    environment:
-      PACKAGE: navi-dashboards
-  main-data4:
-    <<: *main-npm-test-job
-    environment:
-      PACKAGE: navi-data
-  main-directory4:
-    <<: *main-npm-test-job
-    environment:
-      PACKAGE: navi-directory
-  main-notifications4:
-    <<: *main-npm-test-job
-    environment:
-      PACKAGE: navi-notifications
-  main-reports4:
-    <<: *main-npm-test-job
-    environment:
-      PACKAGE: navi-reports
-  main-search4:
-    <<: *main-npm-test-job
-    environment:
-      PACKAGE: navi-search
   main-webservice:
     steps:
       - *install-node
