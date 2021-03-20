@@ -75,78 +75,78 @@ jobs:
     <<: *main-npm-test-job
     environment:
       PACKAGE: navi-search
-  main-admin2:
-    <<: *main-npm-test-job
-    environment:
-      PACKAGE: navi-admin
-  main-app2:
-    <<: *main-npm-test-job
-    environment:
-      PACKAGE: navi-app
-  main-core2:
-    <<: *main-npm-test-job
-    environment:
-      PACKAGE: navi-core
-  main-dashboards2:
-    <<: *main-npm-test-job
-    environment:
-      PACKAGE: navi-dashboards
-  main-data2:
-    <<: *main-npm-test-job
-    environment:
-      PACKAGE: navi-data
-  main-directory2:
-    <<: *main-npm-test-job
-    environment:
-      PACKAGE: navi-directory
-  main-notifications2:
-    <<: *main-npm-test-job
-    environment:
-      PACKAGE: navi-notifications
-  main-reports2:
-    <<: *main-npm-test-job
-    environment:
-      PACKAGE: navi-reports
-  main-search2:
-    <<: *main-npm-test-job
-    environment:
-      PACKAGE: navi-search
-  main-admin3:
-    <<: *main-npm-test-job
-    environment:
-      PACKAGE: navi-admin
-  main-app3:
-    <<: *main-npm-test-job
-    environment:
-      PACKAGE: navi-app
-  main-core3:
-    <<: *main-npm-test-job
-    environment:
-      PACKAGE: navi-core
-  main-dashboards3:
-    <<: *main-npm-test-job
-    environment:
-      PACKAGE: navi-dashboards
-  main-data3:
-    <<: *main-npm-test-job
-    environment:
-      PACKAGE: navi-data
-  main-directory3:
-    <<: *main-npm-test-job
-    environment:
-      PACKAGE: navi-directory
-  main-notifications3:
-    <<: *main-npm-test-job
-    environment:
-      PACKAGE: navi-notifications
-  main-reports3:
-    <<: *main-npm-test-job
-    environment:
-      PACKAGE: navi-reports
-  main-search3:
-    <<: *main-npm-test-job
-    environment:
-      PACKAGE: navi-search
+#   main-admin2:
+#     <<: *main-npm-test-job
+#     environment:
+#       PACKAGE: navi-admin
+#   main-app2:
+#     <<: *main-npm-test-job
+#     environment:
+#       PACKAGE: navi-app
+#   main-core2:
+#     <<: *main-npm-test-job
+#     environment:
+#       PACKAGE: navi-core
+#   main-dashboards2:
+#     <<: *main-npm-test-job
+#     environment:
+#       PACKAGE: navi-dashboards
+#   main-data2:
+#     <<: *main-npm-test-job
+#     environment:
+#       PACKAGE: navi-data
+#   main-directory2:
+#     <<: *main-npm-test-job
+#     environment:
+#       PACKAGE: navi-directory
+#   main-notifications2:
+#     <<: *main-npm-test-job
+#     environment:
+#       PACKAGE: navi-notifications
+#   main-reports2:
+#     <<: *main-npm-test-job
+#     environment:
+#       PACKAGE: navi-reports
+#   main-search2:
+#     <<: *main-npm-test-job
+#     environment:
+#       PACKAGE: navi-search
+#   main-admin3:
+#     <<: *main-npm-test-job
+#     environment:
+#       PACKAGE: navi-admin
+#   main-app3:
+#     <<: *main-npm-test-job
+#     environment:
+#       PACKAGE: navi-app
+#   main-core3:
+#     <<: *main-npm-test-job
+#     environment:
+#       PACKAGE: navi-core
+#   main-dashboards3:
+#     <<: *main-npm-test-job
+#     environment:
+#       PACKAGE: navi-dashboards
+#   main-data3:
+#     <<: *main-npm-test-job
+#     environment:
+#       PACKAGE: navi-data
+#   main-directory3:
+#     <<: *main-npm-test-job
+#     environment:
+#       PACKAGE: navi-directory
+#   main-notifications3:
+#     <<: *main-npm-test-job
+#     environment:
+#       PACKAGE: navi-notifications
+#   main-reports3:
+#     <<: *main-npm-test-job
+#     environment:
+#       PACKAGE: navi-reports
+#   main-search3:
+#     <<: *main-npm-test-job
+#     environment:
+#       PACKAGE: navi-search
   main-webservice:
     steps:
       - *install-node
